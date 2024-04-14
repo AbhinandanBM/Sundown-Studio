@@ -1,8 +1,13 @@
+@font-face {
+  font-family: neuhaas;
+  src: url(./NeueHaasDisplayMediu.ttf);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: neuhaas;
 }
 
 html,
@@ -12,14 +17,15 @@ body {
 }
 
 #page1 {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   background-color: #efeae3;
   position: relative;
+  padding: 0 2vw;
 }
 
 nav {
-  padding: 2vw 2vw;
+  padding: 2vw 0vw;
   width: 100%;
   display: flex;
   align-items: center;
@@ -70,4 +76,97 @@ nav {
 
 #nav-part2 h4 a:hover {
   color: white;
+}
+
+#center {
+  height: 65vh;
+  width: 100%;
+  /* background-color: orange; */
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  border-bottom: 1px solid #0000003c;
+  padding-bottom: 2.5vw;
+}
+
+#left h3 {
+  width: 28vw;
+  font-size: 1.8vw;
+  line-height: 2vw;
+}
+
+#center h1 {
+  font-size: 10vw;
+  line-height: 8vw;
+  text-align: right;
+}
+
+#page1 video {
+  width: 100%;
+  margin-top: 4vw;
+  border-radius: 20px;
+  position: relative;
+}
+
+#hero-shape {
+  position: absolute;
+  width: 46vw;
+  height: 36vw;
+  right: 0;
+  top: 72vh;
+}
+
+#hero-1 {
+  height: 100%;
+  width: 100%;
+  background-color: #f04c2a;
+  /* border-radius: 50%; */
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  filter: blur(20px);
+  position: absolute;
+}
+#hero-2 {
+  position: absolute;
+  height: 30vw;
+  width: 30vw;
+  background: linear-gradient(#f04c2a, #f05f2ad8);
+  border-radius: 50%;
+  filter: blur(25px);
+  animation-name: anime2;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+#hero-3 {
+  position: absolute;
+  height: 30vw;
+  width: 30vw;
+  background: linear-gradient(#f04c2a, #f05f2ad8);
+  border-radius: 50%;
+  filter: blur(25px);
+  animation-name: anime1;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes anime1 {
+  from {
+    transform: translate(45%, -3%);
+  }
+  to {
+    transform: translate(10%, -10%);
+  }
+}
+
+@keyframes anime2 {
+  from {
+    transform: translate(5%, -5%);
+  }
+  to {
+    transform: translate(-20%, 30%);
+  }
 }
